@@ -3,7 +3,7 @@ using System;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace AwsDotnetCsharp
+namespace UCLA.EA.Lambda
 {
     public class MyCoolHandlerTest : MyCoolHandler
     {

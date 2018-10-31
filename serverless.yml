@@ -55,7 +55,7 @@ package:
 
 functions:
   hello:
-    handler: CsharpHandlers::AwsDotnetCsharp.Handler::Hello
+    handler: CsharpHandlers::UCLA.EA.Lambda.Handler::Hello
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

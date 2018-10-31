@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 [assembly:LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 
-namespace AwsDotnetCsharp
+namespace UCLA.EA.Lambda
 {
     public class MyCoolHandler
     {

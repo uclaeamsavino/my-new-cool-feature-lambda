@@ -1,16 +1,22 @@
 using Amazon.Lambda.Core;
 using System;
+using System.Threading.Tasks;
 
 [assembly:LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 
 namespace AwsDotnetCsharp
 {
-    public class Handler
+    public class MyCoolHandler
     {
-       public Response Hello(Request request)
-       {
-           return new Response("Go Serverless v1.0! Your function executed successfully!", request);
-       }
+        // using async example
+        public async Task<Response> Hello(Request request, ILambdaContext context)
+        {
+            Response response = await Task.Run(() => {
+                LambdaLogger.Log("Test1");
+                return new Response("Go Serverless v1.0! Your function executed successfully!", request);
+            });
+            return response;
+        }
     }
 
     public class Response

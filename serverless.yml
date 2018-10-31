@@ -19,6 +19,7 @@ service: my-service-name # NOTE: update this with your service name
 
 provider:
   name: aws
+  region: us-west-2
   runtime: dotnetcore2.1
 
 # you can overwrite defaults here
